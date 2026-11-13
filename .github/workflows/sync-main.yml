@@ -1,0 +1,34 @@
+yaml
+name: Sync Fork main with Upstream
+
+on:
+  schedule:
+    # 每天 UTC 0 点自动运行一次（可修改为更频繁，如 '*/30 * * * *' 每30分钟）
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允许在 Actions 页面手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    # 仅在 Fork 仓库中运行
+    if: github.event.repository.fork == true
+    permissions:
+      contents: write # 需要写入权限来推送变更
+
+    steps:
+      - name: Checkout fork main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0 # 获取完整历史以便正确合并
+          persist-credentials: false
+
+      - name: Sync upstream changes
+        uses: aormsby/fork-sync-with-upstream-action@v3.4.3 # 固定版本更稳定
+        with:
+          upstream_repository: hashgraph-online/awesome-codex-plugins # 替换为上游仓库，例如 "torvalds/linux"
+          upstream_branch: main
+          target_branch: main
+          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+          # 可选：冲突时强制同步（谨慎使用，会覆盖你的本地改动）
+          force: true
