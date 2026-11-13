@@ -2,7 +2,7 @@ name: Sync Fork main with Upstream
 
 on:
   schedule:
-    - cron: '0 0 * * 1'
+    - cron: '0 0 * * 1' # 每周一 UTC 0 点
   workflow_dispatch:
 
 jobs:
@@ -23,8 +23,9 @@ jobs:
       - name: Sync upstream changes
         uses: aormsby/fork-sync-with-upstream-action@v3.4.3
         with:
-          upstream_repository: hashgraph-online/awesome-codex-plugins
-          upstream_branch: main
-          target_branch: main
+          # 正确的新参数名
+          upstream_sync_repo: hashgraph-online/awesome-codex-plugins
+          upstream_sync_branch: main
+          target_sync_branch: main
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
           upstream_pull_args: '--allow-unrelated-histories'
