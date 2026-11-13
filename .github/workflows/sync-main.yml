@@ -2,7 +2,7 @@ name: Sync Fork main with Upstream
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -27,3 +27,4 @@ jobs:
           upstream_branch: main
           target_branch: main
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+          upstream_pull_args: '--allow-unrelated-histories'
