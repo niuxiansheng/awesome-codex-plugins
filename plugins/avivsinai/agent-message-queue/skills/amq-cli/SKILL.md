@@ -1,6 +1,6 @@
 ---
 name: amq-cli
-version: 0.142.2 # x-release-please-version
+version: 0.147.0 # x-release-please-version
 description: Coordinate coding agents through AMQ. Use for agent messages, inboxes, receipts, sessions, wake delivery, cross-project routing, managed launches, or AMQ diagnostics. Use amq-spec for collaborative design; do not use this for general message queues or single-agent work.
 metadata:
   short-description: Inter-agent messaging via AMQ CLI
@@ -28,6 +28,11 @@ Use the first case that applies:
    When a later command says the session has no handle (a terminal session
    after `/clear`), join again. Do not use the `amq env` export here; a shell
    variable does not last between the shell calls of a Claude Code session.
+   A Codex chat with no `AM_ME` (`CODEX_THREAD_ID` is set) joins the same
+   way; its default handle is `codex`. When the output says the wait hook is
+   not installed, tell the user that `amq coop install-hooks --harness codex`
+   installs it, that they approve it in Codex, and that it takes effect in a
+   new chat.
 3. Any other shell: resolve and export the complete context before reading or
    sending:
 
@@ -107,6 +112,15 @@ completion uses `--kind status --labels done`; cancellation uses
 honestly: withdrawing a request does not mean its feature shipped.
 The last `--refs` entry is the direct reply target; a list of refs is lineage,
 not a batch-close operation. Close independent requests separately.
+The one exception is the requester's own requests to one owner in one thread:
+send one reply of `--kind decision --labels settled-through` against the latest
+of them and the pair's older open requests follow. `amq thread settle
+--older-than <dur>` composes exactly one such decision per (thread, owner).
+
+`amq send --follow-up 30m` delivers one notice to the sender's own inbox if the
+recipient has not replied to that message when the time passes; a live wake,
+the wait hook, or the next `drain`, `read`, or `monitor` checks it, and any
+reply from the recipient cancels it.
 
 An unanswered message is a reply obligation, not evidence that work started.
 Use the host harness's task and turn records when activity matters. Keep

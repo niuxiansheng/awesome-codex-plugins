@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "awesome-codex-plugins",
   "version": "1.0.0",
-  "last_updated": "2026-11-13",
-  "total": 406,
+  "last_updated": "2026-11-15",
+  "total": 414,
   "categories": [
     "Development & Workflow",
     "Tools & Integrations"
@@ -645,7 +645,7 @@
       "url": "https://github.com/chipfighter/context-attachment-manager",
       "owner": "chipfighter",
       "repo": "context-attachment-manager",
-      "description": "Manage image history in Codex desktop and Claude Desktop Code with on-demand image retrieval, pinned references, and search by description or feedback.",
+      "description": "Keep image-heavy Codex and Claude Code chats small: earlier images go out as short placeholders instead of being sent again with every message, the model fetches the original back by its ID (also after compaction), and the prompt cache keeps working.",
       "category": "Development & Workflow",
       "source": "awesome-codex-plugins",
       "install_url": "https://raw.githubusercontent.com/chipfighter/context-attachment-manager/HEAD/plugin/.codex-plugin/plugin.json"
@@ -779,6 +779,16 @@
       "category": "Development & Workflow",
       "source": "awesome-codex-plugins",
       "install_url": "https://raw.githubusercontent.com/MedAdemBHA/docflow/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "DocSpring Agent Playbook",
+      "url": "https://github.com/DocSpring/docspring-agent-playbook",
+      "owner": "DocSpring",
+      "repo": "docspring-agent-playbook",
+      "description": "DocSpring's engineering principles, AGENTS.md templates and six workflow skills (ticket kickoff, PR review, second-opinion review, fix CI, browser QA, session wrap-up) for Claude Code, Codex and other agents.",
+      "category": "Development & Workflow",
+      "source": "awesome-codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/DocSpring/docspring-agent-playbook/HEAD/plugin.json"
     },
     {
       "name": "done-gate",
@@ -1622,6 +1632,16 @@
       "install_url": "https://raw.githubusercontent.com/sno-ai/sno-station-skills/HEAD/plugins/sno-station-standalone/.codex-plugin/plugin.json"
     },
     {
+      "name": "SSH Ops",
+      "url": "https://github.com/leehom0123/ssh-ops",
+      "owner": "leehom0123",
+      "repo": "ssh-ops",
+      "description": "Operate Linux and Windows servers over SSH from Codex and the CLI using YAML configurations for commands, SFTP transfers, deployments, and background jobs on bash servers.",
+      "category": "Development & Workflow",
+      "source": "awesome-codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/leehom0123/ssh-ops/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Spec-Driven Development",
       "url": "https://github.com/Habib0x0/spec-driven-plugin",
       "owner": "Habib0x0",
@@ -1782,6 +1802,16 @@
       "install_url": "https://raw.githubusercontent.com/Colin4k1024/tsp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Telegram Bot UI",
+      "url": "https://github.com/hlibsuslov/telegram-bot-ui",
+      "owner": "hlibsuslov",
+      "repo": "telegram-bot-ui",
+      "description": "Design, build and audit Telegram bot interfaces (texts, keyboards, colored buttons, streaming AI replies, Rich Messages, channel posts) with a skill updated for every Bot API release.",
+      "category": "Development & Workflow",
+      "source": "awesome-codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/hlibsuslov/telegram-bot-ui/HEAD/plugin.json"
+    },
+    {
       "name": "TMCRA Local Memory",
       "url": "https://github.com/reshuibuduo/tmcra-plugin-codex",
       "owner": "reshuibuduo",
@@ -1920,6 +1950,16 @@
       "category": "Development & Workflow",
       "source": "awesome-codex-plugins",
       "install_url": "https://raw.githubusercontent.com/Eliasjunit/vibestretch/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "vidbyte-memory",
+      "url": "https://github.com/cerredz/vidbyte-memory",
+      "owner": "cerredz",
+      "repo": "vidbyte-memory",
+      "description": "Correction-driven memory for Codex: turns corrections into facts and pytest checks, stages all repository changes for commits and pushes to origin unless --no-push is used, and installs a Stop hook that keeps turns open until checks pass.",
+      "category": "Development & Workflow",
+      "source": "awesome-codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/cerredz/vidbyte-memory/HEAD/plugin.json"
     },
     {
       "name": "VillageSQL Skills",
@@ -2071,6 +2111,16 @@
       "category": "Tools & Integrations",
       "source": "awesome-codex-plugins",
       "install_url": "https://raw.githubusercontent.com/tashfeenahmed/AgentDomains-skill/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "AgentDrives",
+      "url": "https://github.com/AgentDrives/agentdrives-mcp",
+      "owner": "AgentDrives",
+      "repo": "agentdrives-mcp",
+      "description": "Look up a SaaS tool, API or provider before your agent picks it: its agent level (0-5), where our agent stopped, and whether an agent can sign up, get a key and pay on its own. Read-only remote MCP server and skill, no key.",
+      "category": "Tools & Integrations",
+      "source": "awesome-codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/AgentDrives/agentdrives-mcp/HEAD/plugin.json"
     },
     {
       "name": "Agentgram",
@@ -2844,6 +2894,16 @@
       "install_url": "https://raw.githubusercontent.com/fxmacrodata/claude-plugin-fxmacrodata/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "GetYouTubeTranscript",
+      "url": "https://github.com/tubeagentkit/youtube-mcp",
+      "owner": "tubeagentkit",
+      "repo": "youtube-mcp",
+      "description": "YouTube transcripts in any caption language, YouTube search, channel uploads and playlist videos through a hosted MCP server, plus a skill that writes REST API code for transcripts; 100 free credits on sign-up, paid after that.",
+      "category": "Tools & Integrations",
+      "source": "awesome-codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/tubeagentkit/youtube-mcp/HEAD/plugin.json"
+    },
+    {
       "name": "GH Project",
       "url": "https://github.com/zfifteen/gh-project-plugin",
       "owner": "zfifteen",
@@ -3332,6 +3392,16 @@
       "category": "Tools & Integrations",
       "source": "awesome-codex-plugins",
       "install_url": "https://raw.githubusercontent.com/useorgx/orgx-codex-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "OsmO Phone Calls",
+      "url": "https://github.com/Mountainheads-Private-limited/osmo-ai-plugins",
+      "owner": "Mountainheads-Private-limited",
+      "repo": "osmo-ai-plugins",
+      "description": "Lets Codex place real phone calls to businesses and helplines through OsmO's hosted MCP server after you confirm each one, and read back the summary and transcript; 50 free credits for new users in the US, Canada, UK and Australia, paid after that; with free credits, OsmO calls businesses and toll-free numbers; calling your contacts and scheduling calls need an OsmO app plan.",
+      "category": "Tools & Integrations",
+      "source": "awesome-codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/Mountainheads-Private-limited/osmo-ai-plugins/HEAD/.codex-plugin/plugin.json"
     },
     {
       "name": "PANews Agent Toolkit",
@@ -4012,6 +4082,16 @@
       "category": "Tools & Integrations",
       "source": "awesome-codex-plugins",
       "install_url": "https://raw.githubusercontent.com/Webly-AI/webly-plugin/HEAD/.codex-plugin/plugin.json"
+    },
+    {
+      "name": "Worktable",
+      "url": "https://github.com/worktable/worktable-plugin",
+      "owner": "worktable",
+      "repo": "worktable-plugin",
+      "description": "Connects Codex to a Worktable workspace through a hosted MCP server and six skills to create and revise docs, interactive HTML, drawings, records, annotations, and threads shared by people and agents.",
+      "category": "Tools & Integrations",
+      "source": "awesome-codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/worktable/worktable-plugin/HEAD/plugin.json"
     },
     {
       "name": "X (Twitter) Skills",
